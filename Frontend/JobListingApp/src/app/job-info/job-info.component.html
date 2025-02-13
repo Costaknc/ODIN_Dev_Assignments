@@ -1,8 +1,7 @@
 <div *ngIf="details" class="alert alert-info">
-  <p><strong>Title:</strong> {{ details?.id || "N/A" }}</p>
-  <p><strong>Location:</strong> {{ details?.title || "N/A" }}</p>
-  <p><strong>Business:</strong> {{ details?.businessName || "N/A" }}</p>
-  <p><strong>Location:</strong> {{ details?.municipal || "N/A" }}</p>
-  <p><strong>Status:</strong> {{ details?.status || "N/A" }}</p>
-  <p><strong>Date Modified:</strong> {{ details?.date_modified || "N/A" }}</p>
+  <p><strong>Title:</strong> {{ details.title || "N/A" }}</p>
+  <p><strong>Business:</strong> {{ details.businessName || "N/A" }}</p>
+  <p><strong>Location:</strong> {{ details.municipal || "N/A" }}</p>
+  <p><strong>Status:</strong> {{ details.status || "N/A" }}</p>
+  <p><strong>Date Modified:</strong> {{ details.date_modified || "N/A" }}</p>
 </div>
