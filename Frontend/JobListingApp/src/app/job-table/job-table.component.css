@@ -1,0 +1,15 @@
+.pagination {
+  margin-top: 20px;
+}
+
+tr {
+  font-family: "Times New Roman", Times, Sans-serif;
+  font-size: 1.2vw;
+}
+
+@media only screen and (max-width: 414px) {
+  tr {
+    font-size: 3vw !important;
+    font-weight: 700 !important;
+  }
+}

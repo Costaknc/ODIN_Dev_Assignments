@@ -1,0 +1,56 @@
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Position Title</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let job of paginatedData; let i = index">
+      <tr>
+        <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+        <td>{{ job.title }}</td>
+        <td>{{ job.status }}</td>
+        <td>
+          <button class="btn btn-sm btn-info" (click)="toggleInfo(i)">
+            {{ expandedRows[i] ? "Hide Info" : "Show Info" }}
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="expandedRows[i]">
+        <td colspan="4">
+          <app-job-info *ngIf="expandedRows[i]" [details]="job"></app-job-info>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<nav>
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button class="page-link" (click)="changePage(1)">First</button>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button class="page-link" (click)="changePage(currentPage - 1)">
+        Previous
+      </button>
+    </li>
+    <li
+      class="page-item"
+      [class.active]="page === currentPage"
+      *ngFor="let page of pages"
+    >
+      <button class="page-link" (click)="changePage(page)">{{ page }}</button>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button class="page-link" (click)="changePage(currentPage + 1)">
+        Next
+      </button>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button class="page-link" (click)="changePage(totalPages)">Last</button>
+    </li>
+  </ul>
+</nav>

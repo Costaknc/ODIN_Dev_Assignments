@@ -1,0 +1,15 @@
+a {
+  font-family: "Times New Roman", Times, Sans-serif;
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: white !important;
+}
+
+p {
+  font-family: "Times New Roman", Times, Sans-serif;
+  font-size: 1vw;
+}
+
+#body {
+  background-color: white;
+}
