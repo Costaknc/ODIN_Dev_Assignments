@@ -1,4 +1,4 @@
-# IoT_Assignments
+# IoT_Assignments ( for junior frontend/backend dev)
  
 # Backend
 This was the first time I wrote C# specifically.
